@@ -23,20 +23,18 @@
 >return coll
 ___
 ## Программа:
-string[] arrCheck(string[] collection)
-
-{
-
-    string[] coll = new string[0];
-    int j = 0;
-    for (int i =0; i < collection.Length; i++)
+    string[] arrCheck(string[] collection)
     {
-        if (collection[i].Length <= 3)
+        string[] coll = new string[0];
+        int j = 0;
+        for (int i =0; i < collection.Length; i++)
         {
-            Array.Resize(ref coll, coll.Length+1);
-            coll[j] = collection[i];
-            j++;
+            if (collection[i].Length <= 3)
+            {
+                Array.Resize(ref coll, coll.Length+1);
+                coll[j] = collection[i];
+                j++;
+            }
         }
+        return coll;
     }
-    return coll;
-}
